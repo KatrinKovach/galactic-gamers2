@@ -1,0 +1,280 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #0a0a0a; /* Dark background */
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Smaller Header with Background Image */
+.site-header {
+  background-image: url("../images/galactic-gamers-bg.jpg"); /* Replace with path to your background image */
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Smaller header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  z-index: 0;
+}
+
+/* Consistent Logo across All Pages */
+.logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5em;
+  color: #ff0000; /* Intense red for logo */
+  z-index: 1;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+/* Navigation Menu */
+nav {
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  color: #ff0000; /* Hover color matches logo */
+}
+
+nav ul li a[aria-current="page"] {
+  font-weight: bold;
+  border-bottom: 2px solid #ff0000; /* Underline for current page */
+}
+
+/* Hero Text inside Header */
+.hero-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  color: #ff0000;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #1a1a1a;
+  color: #e0e0e0;
+  border-top: 3px solid #ff0000;
+  border-bottom: 3px solid #333;
+}
+
+.about-section h2 {
+  font-size: 2.2em;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+/* Team Section */
+.team-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #0d0d0d;
+}
+
+.team-section h2 {
+  font-size: 2.2em;
+  color: #ff0000;
+  margin-bottom: 30px;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.player-card {
+  position: relative;
+  text-align: center;
+  margin: 20px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  transition: border-color 0.3s;
+}
+
+.player-card:hover img {
+  border-color: #ffcc00;
+}
+
+.player-info {
+  margin-top: 10px;
+  color: #e0e0e0;
+  font-size: 1.1em;
+}
+
+/* Specific styling for new player cards */
+.player-card.nova-knight img {
+  background-image: url("../images/player1.jpg");
+}
+
+.player-card.cosmic-crusader img {
+  background-image: url("../images/player2.jpg");
+}
+
+.player-card.stellar-sentinel img {
+  background-image: url("../images/player3.jpg");
+}
+
+.player-card.galaxy-guardian img {
+  background-image: url("../images/player4.jpg");
+}
+
+.player-card.nebula-ninja img {
+  background-image: url("../images/player5.jpg");
+}
+
+/* Tournaments Section */
+.tournaments-section {
+  padding: 50px 20px;
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+.tournaments-section h2 {
+  font-size: 2.2em;
+  color: #ff0000;
+  margin-bottom: 30px;
+}
+
+.tournament-cards,
+.tournament-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.tournament-card {
+  background-color: #1a1a1a;
+  color: #ffcc00;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.tournament-card:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  color: #fff;
+}
+
+.tournament-card h3 {
+  font-size: 1.5em;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ffcc00;
+  color: #0a0a0a;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #888;
+  border-top: 3px solid #ff0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-header {
+    height: 40vh; /* Adjust header height on smaller screens */
+  }
+
+  .hero-title {
+    font-size: 1.8em;
+  }
+
+  .highlight-cards,
+  .team-cards,
+  .news-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
